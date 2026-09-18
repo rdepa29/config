@@ -1,4 +1,4 @@
-# Fix missing UNIX paths when launching directly from Windows Terminal
+# # fix unix paths for windows terminal
 if status is-login; or status is-interactive
     contains /usr/bin $PATH; or set -gx PATH /usr/bin $PATH
     contains /bin $PATH; or set -gx PATH /bin $PATH
