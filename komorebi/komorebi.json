@@ -1,0 +1,69 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.41/schema.json",
+  "window_based_strategies": {
+    "WindowFastHook": [
+      {
+        "kind": "Exe",
+        "id": "WindowsTerminal.exe",
+        "matching_strategy": "Equals"
+      }
+    ]
+  },
+  "app_specific_configuration_path": "$Env:USERPROFILE/.config/komorebi/applications.json",
+  "window_hiding_behaviour": "Cloak",
+  "cross_monitor_move_behaviour": "Insert",
+  "default_workspace_padding": 6,
+  "default_container_padding": 6,
+  "border": true,
+  "border_width": 3,
+  "border_offset": 0,
+  "border_style": "Rounded",
+  "border_colours": {
+    "single": "#cba6f7",
+    "stack": "#a6e3a1",
+    "monocle": "#f38ba8",
+    "unfocused": "#11111b"
+  },
+  "mouse_follows_focus": false,
+  "transparency": true,
+  "transparency_alpha": 255,
+  "animation": {
+    "enabled": true,
+    "duration": {
+      "movement": 300,
+      "transparency": 300
+    },
+    "fps": 60,
+    "style": {
+      "movement": "EaseInOutCubic",
+      "transparency": "Linear"
+    }
+  },
+  "theme": {
+    "palette": "Catppuccin",
+    "name": "Mocha",
+    "accent": "Mocha"
+  },
+  "stackbar": {
+    "height": 24,
+    "mode": "Never",
+    "label": "Title",
+    "tabs": {
+      "width": 200,
+      "font_size": 16
+    }
+  },
+  "monitors": [
+    {
+      "workspaces": [
+        {"name": "I", "layout": "BSP"},
+        {"name": "II", "layout": "BSP"},
+        {"name": "III", "layout": "BSP"},
+        {"name": "IV", "layout": "BSP"},
+        {"name": "V", "layout": "BSP"},
+        {"name": "VI", "layout": "BSP"},
+        {"name": "VII", "layout": "BSP"}
+      ]
+    }
+  ]
+}
