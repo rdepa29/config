@@ -9,7 +9,7 @@
 ; live-config = 0
 
 # Accepts only non-negative values.
-; framerate = 60
+; framerate = 144
 
 # 'autosens' will attempt to decrease sensitivity if the bars peak and increase slowly as
 # long as the bars don't peak. 0 = off, 1 = normal, 2..n = more aggressive.
