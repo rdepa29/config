@@ -2,7 +2,7 @@ function fish_prompt
     set -l last_status $status
 
     if test $last_status -eq 0
-        set_color 8ab4f8
+        set_color $fish_color_accent
     else
         set_color ff5f5f
     end
@@ -15,7 +15,7 @@ function fish_prompt
     echo -n (prompt_pwd)
 
     if test $last_status -eq 0
-        set_color 8ab4f8
+        set_color $fish_color_accent
     else
         set_color ff5f5f
 
