@@ -20,9 +20,4 @@ if status is-interactive
         end
         builtin cd $target
     end
-
-    function fish_prompt
-        set -l win (cygpath -w -- $PWD 2>/dev/null)
-        printf '%s> ' $win
-    end
 end

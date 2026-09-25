@@ -12,7 +12,7 @@ function fish_prompt
     set_color normal
 
     set_color b4b4b4
-    echo -n (prompt_pwd)
+    echo -n (cygpath -w -- $PWD 2>/dev/null)
 
     if test $last_status -eq 0
         set_color $fish_color_accent
