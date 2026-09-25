@@ -14,7 +14,7 @@ end
 # custom functions
 alias c="clear"
 alias ff="fastfetch"
-alias btop="btop4win"
+alias btop="btop"
 
 function cf
     clear
