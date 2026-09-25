@@ -4,6 +4,11 @@ if status is-login; or status is-interactive
     contains /bin $PATH; or set -gx PATH /bin $PATH
 end
 
+# ricer shims (and anything else dropped in ~/bin) on PATH
+if status is-interactive
+    test -d "$HOME/bin"; and fish_add_path "$HOME/bin"
+end
+
 # zoxide init
 zoxide init fish | source
 
