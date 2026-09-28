@@ -1,9 +1,9 @@
 function ricer
-    set -l script "$HOME/bin/ricer.ps1"
-    if test -f "$script"
-        powershell -NoProfile -ExecutionPolicy Bypass -File "$script" $argv
+    set -l exe "$HOME/bin/ricer.exe"
+    if test -f "$exe"
+        "$exe" $argv
     else
-        echo "ricer: missing $script - run ricer.bat (or ricer install) once to install the shim"
+        echo "ricer: missing $exe - run 'ricer install' once to install the shim"
         return 1
     end
 end
