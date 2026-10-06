@@ -19,7 +19,7 @@ Komorebic(cmd) {
 ; Launch apps
 #c::Run("C:\Users\Rdepa29\AppData\Local\Programs\Zed\bin\Zed.exe")
 #a::Run("C:\Users\Rdepa29\zen\zen.exe")
-#e::Run("C:\Users\Rdepa29\AppData\Local\Programs\Git\usr\bin\fish.exe")
+#e::Run("C:\Users\Rdepa29\AppData\Local\Microsoft\WindowsApps\wt.exe")
 
 ; Focus windows
 #Left::Komorebic("focus left")
