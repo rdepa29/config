@@ -1,4 +1,3 @@
 function fish_greeting
-    z
-    c
+    cf
 end
