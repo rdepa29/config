@@ -4,11 +4,7 @@ local act = wezterm.action
 local config = wezterm.config_builder()
 
 config.default_prog = {
-  'C:\\Users\\Rdepa29\\AppData\\Local\\Programs\\Git\\bin\\bash.exe',
-  '--login',
-  '-i',
-  '-c',
-  'exec /usr/bin/fish'
+    'C:\\msys64\\fish.cmd',
 }
 
 config.keys = {
@@ -21,9 +17,10 @@ config.keys = {
 
 config.window_decorations = 'RESIZE'
 
-config.window_background_opacity = 0.85
+-- Opacity and Backdrop Settings matching Everforest
+config.window_background_opacity = 0.0
 config.win32_system_backdrop = 'Acrylic'
-config.win32_acrylic_accent_color = '#11111b'
+config.win32_acrylic_accent_color = '#2d353b' -- Matches Everforest background base
 
 config.default_cursor_style = 'BlinkingBar'
 config.cursor_blink_rate = 600
@@ -31,23 +28,23 @@ config.cursor_blink_ease_in = 'Constant'
 config.cursor_blink_ease_out = 'Constant'
 config.cursor_thickness = '2px'
 
+-- Everforest Dark Color Palette
 config.colors = {
-  foreground = '#cdd6f4',
-  background = '#1e1e2e',
-  cursor_bg = '#f5e0dc',
-  cursor_border = '#f5e0dc',
-  cursor_fg = '#1e1e2e',
-  selection_bg = '#585b70',
-  selection_fg = '#cdd6f4',
+  foreground = '#d3c6aa',
+  background = '#2d353b',
+  cursor_bg = '#a7c080',
+  cursor_border = '#a7c080',
+  cursor_fg = '#2d353b',
+  selection_bg = '#475258',
+  selection_fg = '#d3c6aa',
   ansi = {
-    '#45475a', '#f38ba8', '#a6e3a1', '#f9e2af',
-    '#89b4fa', '#f5c2e7', '#94e2d5', '#bac2de',
+    '#343f44', '#e67e80', '#a7c080', '#dbbc7f',
+    '#7fbbb3', '#d699b6', '#83c092', '#859289',
   },
   brights = {
-    '#585b70', '#f38ba8', '#a6e3a1', '#f9e2af',
-    '#89b4fa', '#f5c2e7', '#94e2d5', '#a6adc8',
+    '#475258', '#e67e80', '#a7c080', '#dbbc7f',
+    '#7fbbb3', '#d699b6', '#83c092', '#9da9a0',
   },
-  indexed = { [16] = '#fab387', [17] = '#cba6f7' },
 }
 
 config.scrollback_lines = 100000
@@ -68,6 +65,8 @@ config.font_size = 11.0
 config.line_height = 1.12
 config.freetype_load_flags = 'NO_HINTING'
 
-config.enable_kitty_keyboard = false
+-- Modern terminal configurations for crisp inputs and animations
+config.enable_kitty_keyboard = true
+config.animation_fps = 120
 
 return config

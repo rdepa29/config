@@ -17,7 +17,7 @@ Komorebic(cmd) {
 #+o::Komorebic("reload-configuration")
 
 ; Launch apps
-#c::Run("C:\Users\Rdepa29\AppData\Local\Programs\Zed\bin\Zed.exe")
+#c::Run("C:\Users\Rdepa29\scoop\shims\zed")
 #a::Run("C:\Users\Rdepa29\zen\zen.exe")
 #e::Run("C:\Users\Rdepa29\AppData\Local\Microsoft\WindowsApps\wt.exe")
 

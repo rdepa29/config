@@ -1,4 +1,4 @@
-# # fix unix paths for windows terminal
+# fix unix paths for windows terminal
 if status is-login; or status is-interactive
     contains /usr/bin $PATH; or set -gx PATH /usr/bin $PATH
     contains /bin $PATH; or set -gx PATH /bin $PATH
@@ -18,10 +18,24 @@ end
 
 # custom functions
 alias c="clear"
+alias f="fetch"
 alias ff="fastfetch"
 alias btop="btop"
 
 function cf
     clear
+    fetch
+end
+
+function cff
+    clear
     fastfetch
 end
+
+function x -a path
+    z "$path"
+    ls
+end
+
+# java home (Temurin 17)
+set -gx JAVA_HOME "C:\Users\Rdepa29\AppData\Local\Programs\Eclipse Adoptium\jdk-17.0.20.101-hotspot"

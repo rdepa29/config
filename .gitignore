@@ -1,1 +1,6 @@
 opencode/
+.android/
+
+# wqs
+wqs.log
+wqs.log.bak
