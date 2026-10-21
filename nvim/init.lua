@@ -223,6 +223,7 @@ end
 
 vim.keymap.set("n", "<C-e>", function() open_terminal() end, { desc = "Open Terminal (smart split)" })
 vim.keymap.set("n", "<C-S-e>", function() open_terminal("below") end, { desc = "Open Terminal (below)" })
+vim.keymap.set("i", "<C-e>", "<C-\\><C-n><C-e>", { remap = true, desc = "Open Terminal (smart split)" })
 
 -- windowing
 vim.opt.splitright = true
@@ -230,12 +231,46 @@ vim.opt.splitbelow = true
 
 vim.keymap.set("", "<C-q>", "<cmd>:q<cr>", { desc = "Quit" })
 vim.keymap.set("t", "<C-q>", "<C-\\><C-n>:q<cr>", { desc = "Close terminal window" })
+vim.keymap.set("i", "<C-q>", "<C-\\><C-n><C-q>", { remap = true, desc = "Quit" })
 
 vim.api.nvim_create_autocmd("TermOpen", {
     group = vim.api.nvim_create_augroup("TerminalModifiable", { clear = true }),
     callback = function(args)
         vim.bo[args.buf].modifiable = true
     end,
+})
+
+-- mode follows focus: Insert for a real file, Terminal-mode for a terminal
+local focus_group = vim.api.nvim_create_augroup("ModeFollowsFocus", { clear = true })
+
+local function focus_mode(args)
+    if vim.fn.getcmdwintype() ~= "" then
+        return
+    end
+
+    local buf = args.buf
+    local bt = vim.bo[buf].buftype
+
+    if bt == "terminal" then
+        vim.cmd("startinsert")
+        return
+    end
+
+    if (bt ~= "" and bt ~= "acwrite") or not vim.bo[buf].modifiable then
+        return
+    end
+
+    local name = vim.api.nvim_buf_get_name(buf)
+    if name == "" or vim.fn.isdirectory(name) == 1 then
+        return
+    end
+
+    vim.cmd("startinsert")
+end
+
+vim.api.nvim_create_autocmd({ "BufEnter", "WinEnter", "TermOpen" }, {
+    group = focus_group,
+    callback = focus_mode,
 })
 
 -- config reload
