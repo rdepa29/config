@@ -1,5 +1,5 @@
 function fish_right_prompt
-    set_color b4b4b4
+    set_color B9CDB0
 
     if test $CMD_DURATION -lt 1000
         echo -n $CMD_DURATION"ms"

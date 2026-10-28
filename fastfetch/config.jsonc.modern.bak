@@ -1,0 +1,109 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "logo": null,
+  "general": {
+    "detectVersion": false
+  },
+  "display": {
+    "separator": "  ·  ",
+    "brightColor": false,
+    "key": {
+      "type": "string",
+      "width": 12
+    },
+    "percent": {
+      "type": ["num", "bar"]
+    },
+    "bar": {
+      "border": null,
+      "char": {
+        "elapsed": "━",
+        "total": "─"
+      },
+      "color": {
+        "elapsed": "#C4FFB0",
+        "total": "#333E2E"
+      },
+      "width": 12
+    },
+    "color": {
+      "keys": "#C4FFB0",
+      "title": "#C4FFB0",
+      "output": "#FFFFFF",
+      "separator": "#8FA284"
+    }
+  },
+  "modules": [
+    {
+      "type": "title",
+      "format": "{user-name-colored}@{host-name-colored}"
+    },
+    "break",
+    {
+      "type": "os",
+      "key": "System"
+    },
+    {
+      "type": "kernel",
+      "key": "Kernel"
+    },
+    {
+      "type": "uptime",
+      "key": "Uptime"
+    },
+    {
+      "type": "packages",
+      "key": "Packages"
+    },
+    {
+      "type": "shell",
+      "key": "Shell"
+    },
+    {
+      "type": "wm",
+      "key": "Desktop"
+    },
+    {
+      "type": "theme",
+      "key": "Theme"
+    },
+    {
+      "type": "display",
+      "key": "Display"
+    },
+    {
+      "type": "terminal",
+      "key": "Terminal"
+    },
+    {
+      "type": "cpu",
+      "key": "CPU"
+    },
+    {
+      "type": "gpu",
+      "key": "GPU"
+    },
+    {
+      "type": "memory",
+      "key": "Memory"
+    },
+    {
+      "type": "disk",
+      "key": "Storage"
+    },
+    {
+      "type": "localip",
+      "key": "Network"
+    },
+    {
+      "type": "battery",
+      "key": "Battery"
+    },
+    "break",
+    {
+      "type": "colors",
+      "key": "Palette",
+      "symbol": "circle"
+    }
+  ]
+}

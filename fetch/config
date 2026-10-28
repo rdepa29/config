@@ -1,0 +1,17 @@
+cpu
+gpu
+memory
+disk
+display
+---
+os
+kernel
+packages
+shell
+wm
+font
+uptime
+ip
+battery
+label_color=green
+separator=:

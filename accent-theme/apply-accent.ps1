@@ -6,9 +6,11 @@
 $ErrorActionPreference = 'Stop'
 
 function Get-AccentHex {
-    $ui = New-Object Windows.UI.ViewManagement.UISettings
-    $c = $ui.GetColorValue([Windows.UI.ViewManagement.UIColorType]::Accent)
-    return ('{0:X2}{1:X2}{2:X2}' -f $c.R, $c.G, $c.B)
+    $raw = [Convert]::ToString((Get-ItemProperty 'HKCU:\Software\Microsoft\Windows\DWM' -Name AccentColor -ErrorAction Stop).AccentColor, 16).PadLeft(8, '0')
+    $r = [Convert]::ToInt32($raw.Substring(6, 2), 16)
+    $g = [Convert]::ToInt32($raw.Substring(4, 2), 16)
+    $b = [Convert]::ToInt32($raw.Substring(2, 2), 16)
+    return ('{0:X2}{1:X2}{2:X2}' -f $r, $g, $b)
 }
 
 function Mix-White([string]$hex, [int]$pct) {
@@ -45,4 +47,17 @@ if (Test-Path -LiteralPath $komo) {
     $j | ConvertTo-Json -Depth 100 | Set-Content -LiteralPath $komo -Encoding utf8
     komorebic reload-configuration 2>$null | Out-Null
     Write-Output "komorebi borders updated + reloaded"
+}
+
+# --- firefox material you accent ---
+$accentCss = ":root {`n  --md-source: #$accent;`n}`n"
+$ffDirs = @("$env:USERPROFILE\.config\firefox\chrome")
+$ffDirs += Get-ChildItem "$env:APPDATA\Mozilla\Firefox\Profiles" -Directory -ErrorAction SilentlyContinue |
+    ForEach-Object { Join-Path $_.FullName 'chrome' } |
+    Where-Object { Test-Path -LiteralPath $_ }
+
+foreach ($dir in $ffDirs | Select-Object -Unique) {
+    $file = Join-Path $dir 'accent.css'
+    [System.IO.File]::WriteAllText($file, $accentCss, (New-Object System.Text.UTF8Encoding($false)))
+    Write-Output "firefox accent updated: $file (restart firefox to apply)"
 }

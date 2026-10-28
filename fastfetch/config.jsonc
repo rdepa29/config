@@ -1,0 +1,174 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "auto",
+    "source": "windows",
+    "padding": {
+      "top": 0,
+      "left": 0,
+      "right": 3
+    },
+    "color": {
+      "1": "#C4FFB0",
+      "2": "#B8E8F0",
+      "3": "#8FA284",
+      "4": "#AEE89C",
+      "5": "#BCD3FF",
+      "6": "#D6FFC8",
+      "7": "#C4FFB0",
+      "8": "#B8E8F0",
+      "9": "#8FA284"
+    }
+  },
+  "general": {
+    "detectVersion": false,
+    "preload": {
+      "lua": "dofile('C:/Users/Rdepa29/.config/fastfetch/helpers.lua')"
+    }
+  },
+  "display": {
+    "separator": " ",
+    "brightColor": false,
+    "key": {
+      "type": "string",
+      "width": 0
+    },
+    "color": {
+      "keys": "#C4FFB0",
+      "title": "#C4FFB0",
+      "output": "#FFFFFF",
+      "separator": "#8FA284"
+    }
+  },
+  "modules": [
+    {
+      "type": "custom",
+      "key": " ",
+      "format": "lua:return fftop('Hardware')"
+    },
+    {
+      "type": "cpu",
+      "key": "â”‚ {icon}",
+      "keyColor": "#FAF3B8",
+      "format": "lua:return ffline(ffcpu(...))"
+    },
+    {
+      "type": "cpuusage",
+      "key": "â”‚  ",
+      "keyColor": "#FAF3B8",
+      "format": "lua:return ffline(ffcpuusage(...))"
+    },
+    {
+      "type": "gpu",
+      "key": "â”‚ {icon}",
+      "keyColor": "#FAF3B8",
+      "format": "lua:return ffline(ffgpu(...))"
+    },
+    {
+      "type": "gpu",
+      "key": "â”‚  ",
+      "keyColor": "#FAF3B8",
+      "format": "lua:return ffline(ffgpu_specs(...))"
+    },
+    {
+      "type": "memory",
+      "key": "â”‚ {icon}",
+      "keyColor": "#FAF3B8",
+      "format": "lua:return ffline(ffmemory(...))"
+    },
+    {
+      "type": "disk",
+      "key": "â”‚ {icon}",
+      "keyColor": "#FAF3B8",
+      "format": "lua:return ffline(ffdisk(...))"
+    },
+    {
+      "type": "display",
+      "key": "â”‚ {icon}",
+      "keyColor": "#FAF3B8",
+      "format": "lua:return ffline(ffdisplay(...))"
+    },
+    {
+      "type": "custom",
+      "key": " ",
+      "format": "lua:return ffbottom()"
+    },
+    "break",
+    {
+      "type": "custom",
+      "key": " ",
+      "format": "lua:return fftop('Software')"
+    },
+    {
+      "type": "os",
+      "key": "â”‚ {icon}",
+      "keyColor": "#BCD3FF",
+      "format": "lua:return ffline(ffos(...))"
+    },
+    {
+      "type": "kernel",
+      "key": "â”‚ {icon}",
+      "keyColor": "#BCD3FF",
+      "format": "lua:return ffline(ffkernel(...))"
+    },
+    {
+      "type": "packages",
+      "key": "â”‚ {icon}",
+      "keyColor": "#BCD3FF",
+      "format": "lua:return ffline(ffpackages(...))"
+    },
+    {
+      "type": "shell",
+      "key": "â”‚ {icon}",
+      "keyColor": "#BCD3FF",
+      "format": "lua:return ffline(ffshell(...))"
+    },
+    {
+      "type": "wm",
+      "key": "â”‚ {icon}",
+      "keyColor": "#BCD3FF",
+      "format": "lua:return ffline(ffwm(...))"
+    },
+    {
+      "type": "terminalfont",
+      "key": "â”‚ {icon}",
+      "keyColor": "#BCD3FF",
+      "format": "lua:return ffline(fffont(...))"
+    },
+    {
+      "type": "custom",
+      "key": " ",
+      "format": "lua:return ffbottom()"
+    },
+    "break",
+    {
+      "type": "custom",
+      "key": " ",
+      "format": "lua:return fftop('System')"
+    },
+    {
+      "type": "uptime",
+      "key": "â”‚ {icon}",
+      "keyColor": "#C4FFB0",
+      "format": "lua:return ffline(ffuptime(...))"
+    },
+    {
+      "type": "localip",
+      "key": "â”‚ {icon}",
+      "keyColor": "#C4FFB0",
+      "format": "lua:return ffline(fflocalip(...))"
+    },
+    {
+      "type": "battery",
+      "key": "â”‚ {icon}",
+      "keyColor": "#C4FFB0",
+      "format": "lua:return ffline(ffbattery(...))"
+    },
+    {
+      "type": "custom",
+      "key": " ",
+      "format": "lua:return ffbottom()"
+    }
+  ]
+}
+

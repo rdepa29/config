@@ -302,22 +302,6 @@ vim.keymap.set(
 
 require("lazy").setup(
     {
-        {
-            "sainnhe/everforest",
-            name = "everforest",
-            lazy = false,
-            priority = 1000,
-            config = function()
-                -- 0 = disabled, 1 = transparent background, 2 = transparent background + sign column/floating windows
-                vim.g.everforest_transparent_background = 2
-
-                -- 'hard', 'medium (default)', or 'soft'
-                vim.g.everforest_background = 'hard'
-
-                vim.cmd.colorscheme("everforest")
-            end,
-        },
-
         -- cursor
         {
             "sphamba/smear-cursor.nvim",
@@ -392,5 +376,14 @@ require("lazy").setup(
             },
             opts = {},
         },
+
+        -- live file reload
+        {
+            "manuuurino/autoread.nvim",
+            cmd = "Autoread",
+            opts = {},
+        }
     }
 )
+
+vim.cmd.colorscheme("everforest-black")

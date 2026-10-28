@@ -1,0 +1,14 @@
+{
+  "Hotkey": "Win\u002BShift\u002BL",
+  "AuthMode": "password",
+  "AutoStart": true,
+  "EnableWelcomeMessage": true,
+  "Ap": false,
+  "WelcomeBgBlurAmount": 0.7,
+  "WelcomeColorOpacity": 0.7,
+  "MainCardBlurAmount": 0.9,
+  "MainCardColorOpacity": 0.9,
+  "MainCardComponentsOpacity": 0.9,
+  "WelcomeBgBlur": true,
+  "MainCardBgBlur": true
+}

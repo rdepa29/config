@@ -1,0 +1,754 @@
+@import url("palette.css");
+
+:root {
+  color-scheme: dark !important;
+
+  --color-accent-primary: var(--ef-accent) !important;
+  --color-accent-primary-hover: var(--ef-accent-hover) !important;
+  --color-accent-primary-active: var(--ef-accent-active) !important;
+  --color-accent-primary-selected: var(--ef-accent) !important;
+  --color-accent-attention: var(--ef-yellow) !important;
+
+  --focus-outline-color: var(--ef-accent) !important;
+  --focus-outline-width: 1px !important;
+  --focus-outline-offset: 1px !important;
+
+  --link-color: var(--ef-accent) !important;
+  --link-color-hover: var(--ef-accent-hover) !important;
+  --link-color-active: var(--ef-accent-active) !important;
+  --link-color-visited: var(--ef-magenta) !important;
+
+  --background-color-canvas: var(--ef-bg) !important;
+  --background-color-box: var(--ef-bg) !important;
+  --background-color-box-info: var(--ef-bg) !important;
+  --background-color-list-item-hover: var(--ef-element-selected) !important;
+  --background-color-success: #1A2416 !important;
+  --background-color-warning: #2A2816 !important;
+  --background-color-critical: #2A1A1A !important;
+  --background-color-information: #1A202A !important;
+  --background-color-overlay: #1e1e2eB3 !important;
+
+  --text-color: var(--ef-text) !important;
+  --text-color-deemphasized: var(--ef-text-muted) !important;
+  --text-color-disabled: var(--ef-text-disabled) !important;
+  --text-color-error: var(--ef-red) !important;
+  --text-color-list-item-hover: var(--ef-text) !important;
+  --text-color-accent-primary-selected: var(--ef-black) !important;
+
+  --icon-color: var(--ef-icon) !important;
+  --icon-color-critical: var(--ef-red) !important;
+  --icon-color-information: var(--ef-cyan) !important;
+  --icon-color-success: var(--ef-accent) !important;
+  --icon-color-warning: var(--ef-warning) !important;
+
+  --border-color: var(--ef-border-variant) !important;
+  --border-color-deemphasized: var(--ef-border-disabled) !important;
+  --border-color-interactive: var(--ef-border-variant) !important;
+  --border-color-interactive-hover: var(--ef-border-focused) !important;
+  --border-color-interactive-active: var(--ef-accent) !important;
+  --border-color-interactive-disabled: var(--ef-border-disabled) !important;
+  --border-color-selected: var(--ef-accent) !important;
+  --border-color-error: var(--ef-red) !important;
+  --border-color-transparent: transparent !important;
+  --border-width: 1px !important;
+
+  --border-radius-xsmall: 0 !important;
+  --border-radius-small: 0 !important;
+  --border-radius-medium: 0 !important;
+  --border-radius-large: 0 !important;
+  --border-radius-xlarge: 0 !important;
+  --border-radius-circle: 9999px !important;
+
+  --box-shadow-level-1: none !important;
+  --box-shadow-level-2: none !important;
+  --box-shadow-level-3: none !important;
+  --box-shadow-level-4: none !important;
+
+  --button-background-color: var(--ef-element) !important;
+  --button-background-color-hover: var(--ef-element-hover) !important;
+  --button-background-color-active: var(--ef-element-active) !important;
+  --button-background-color-selected: var(--ef-element-selected) !important;
+  --button-background-color-disabled: var(--ef-element-disabled) !important;
+  --button-background-color-ghost: transparent !important;
+  --button-background-color-ghost-hover: var(--ef-element-hover) !important;
+  --button-background-color-ghost-active: var(--ef-element-active) !important;
+  --button-background-color-primary: var(--ef-accent) !important;
+  --button-background-color-primary-hover: var(--ef-accent-hover) !important;
+  --button-background-color-primary-active: var(--ef-accent-active) !important;
+  --button-background-color-destructive: var(--ef-red) !important;
+  --button-background-color-destructive-hover: var(--ef-red-hover) !important;
+  --button-background-color-destructive-active: var(--ef-red-active) !important;
+  --button-text-color: var(--ef-text) !important;
+  --button-text-color-hover: var(--ef-text) !important;
+  --button-text-color-active: var(--ef-text) !important;
+  --button-text-color-disabled: var(--ef-text-disabled) !important;
+  --button-text-color-ghost: var(--ef-text) !important;
+  --button-text-color-ghost-hover: var(--ef-text) !important;
+  --button-text-color-ghost-active: var(--ef-text) !important;
+  --button-text-color-primary: var(--ef-black) !important;
+  --button-text-color-primary-hover: var(--ef-black) !important;
+  --button-text-color-primary-active: var(--ef-black) !important;
+  --button-text-color-destructive: var(--ef-black) !important;
+  --button-text-color-destructive-hover: var(--ef-black) !important;
+  --button-text-color-destructive-active: var(--ef-black) !important;
+  --button-border-color: var(--ef-border-variant) !important;
+  --button-border-color-hover: var(--ef-border-focused) !important;
+  --button-border-color-active: var(--ef-accent) !important;
+  --button-border-color-primary: transparent !important;
+  --button-border-color-ghost: transparent !important;
+  --button-border-color-ghost-hover: transparent !important;
+  --button-border-color-ghost-active: transparent !important;
+  --button-border-radius: 0 !important;
+
+  --input-background-color: var(--ef-bg) !important;
+  --input-border-color: var(--ef-border-variant) !important;
+  --input-border-radius: 0 !important;
+  --input-search-border-radius: 0 !important;
+  --input-text-color: var(--ef-text) !important;
+
+  --panel-background-color: var(--ef-bg) !important;
+  --panel-border-color: var(--ef-border-variant) !important;
+  --panel-text-color: var(--ef-text) !important;
+  --panel-border-radius: 0 !important;
+  --panel-menuitem-border-radius: 0 !important;
+  --panel-separator-color: var(--ef-border-disabled) !important;
+  --panel-box-shadow: none !important;
+  --panel-footer-background-color: var(--ef-element) !important;
+
+  --popup-background-color: var(--ef-bg) !important;
+  --popup-border-color: var(--ef-border-variant) !important;
+  --popup-border-radius: 0 !important;
+  --popup-box-shadow: none !important;
+
+  --card-background-color: var(--ef-bg) !important;
+  --card-border-color: var(--ef-border-disabled) !important;
+  --card-border-radius: 0 !important;
+  --card-border-radius-compact: 0 !important;
+  --card-box-shadow: none !important;
+  --card-box-shadow-hover: none !important;
+
+  --table-background-color: var(--ef-bg) !important;
+  --table-border-color: var(--ef-border-disabled) !important;
+  --table-header-background-color: var(--ef-accent) !important;
+  --table-header-text-color: var(--ef-black) !important;
+  --table-row-background-color: var(--ef-bg) !important;
+  --table-row-background-color-alternate: var(--ef-bg) !important;
+
+  --sidebar-background-color: var(--ef-bg) !important;
+  --sidebar-text-color: var(--ef-text) !important;
+  --sidebar-border-color: var(--ef-border-disabled) !important;
+
+  --toolbar-background-color: var(--ef-bg) !important;
+  --toolbar-text-color: var(--ef-text) !important;
+  --toolbar-field-background-color: var(--ef-bg) !important;
+  --toolbar-field-background-color-focus: var(--ef-bg) !important;
+  --toolbar-field-border-color: var(--ef-border-variant) !important;
+  --toolbar-field-border-color-focus: var(--ef-accent) !important;
+  --toolbar-field-text-color: var(--ef-text) !important;
+  --toolbar-field-text-color-focus: var(--ef-text) !important;
+  --toolbarseparator-color: var(--ef-border-disabled) !important;
+
+  --toolbarbutton-background-color: transparent !important;
+  --toolbarbutton-background-color-hover: var(--ef-element-hover) !important;
+  --toolbarbutton-background-color-active: var(--ef-element-active) !important;
+  --toolbarbutton-icon-fill: var(--ef-icon) !important;
+  --toolbarbutton-icon-fill-hover: var(--ef-text) !important;
+  --toolbarbutton-icon-fill-active: var(--ef-text) !important;
+  --toolbarbutton-icon-fill-attention: var(--ef-accent) !important;
+  --toolbarbutton-icon-fill-attention-text: var(--ef-black) !important;
+  --toolbarbutton-border-radius: 0 !important;
+  --toolbarbutton-outline-color: transparent !important;
+  --toolbarbutton-outline-color-hover: var(--ef-border-disabled) !important;
+  --toolbarbutton-outline-color-active: var(--ef-accent) !important;
+  --toolbarbutton-outline-color-selected: var(--ef-accent) !important;
+  --toolbarbutton-badge-background-color: var(--ef-accent) !important;
+  --toolbarbutton-badge-text-color: var(--ef-black) !important;
+
+  --identity-box-verified-icon-fill: var(--ef-accent) !important;
+  --identity-box-verified-background-color: transparent !important;
+  --identity-box-mixed-icon-fill: var(--ef-yellow) !important;
+  --identity-box-mixed-background-color: transparent !important;
+  --identity-box-not-secure-icon-fill: var(--ef-text-muted) !important;
+  --identity-box-not-secure-background-color: transparent !important;
+
+  --tab-background-color: transparent !important;
+  --tab-background-color-hover: var(--ef-element-hover) !important;
+  --tab-background-color-selected: var(--ef-bg) !important;
+  --tab-text-color: var(--ef-text-muted) !important;
+  --tab-text-color-hover: var(--ef-text) !important;
+  --tab-text-color-selected: var(--ef-text) !important;
+  --tab-border-color: transparent !important;
+  --tab-border-color-hover: var(--ef-border-disabled) !important;
+  --tab-border-color-selected: var(--ef-accent) !important;
+  --tab-border-radius: 0 !important;
+  --tab-box-shadow-selected: none !important;
+  --tab-attention-dot-color: var(--ef-yellow) !important;
+  --tab-icon-fill-loading: var(--ef-accent) !important;
+
+  --urlbar-background-color: var(--ef-bg) !important;
+  --urlbar-background-color-focus: var(--ef-bg) !important;
+  --urlbar-border-radius: 0 !important;
+  --urlbarview-border-radius: 0 !important;
+  --urlbarview-background-color-hover: var(--ef-element-hover) !important;
+  --urlbarview-background-color-selected: var(--ef-element-selected) !important;
+  --urlbarview-text-color-selected: var(--ef-text) !important;
+  --urlbarview-text-color-secondary: var(--ef-text-muted) !important;
+  --urlbarview-separator-color: var(--ef-border-disabled) !important;
+
+  --lwt-accent-color: var(--ef-bg) !important;
+  --lwt-accent-color-inactive: var(--ef-bg) !important;
+  --lwt-text-color: var(--ef-text) !important;
+  --lwt-tab-line-color: transparent !important;
+  --lwt-additional-images: none !important;
+  --lwt-background-alignment: center !important;
+  --lwt-background-tiling: no-repeat !important;
+  --lwt-background-size: auto !important;
+
+  --toolbox-background-color: var(--ef-bg) !important;
+  --toolbox-text-color: var(--ef-text) !important;
+  --toolbox-background-color-inactive: var(--ef-bg) !important;
+  --toolbox-text-color-inactive: var(--ef-text-muted) !important;
+  --toolbox-background-image: none !important;
+
+  --chrome-content-separator-color: var(--ef-border-disabled) !important;
+  --tabs-navbar-separator-color: var(--ef-border-disabled) !important;
+  --tabs-navbar-separator-style: solid !important;
+
+  --content-area-shadow: none !important;
+  --tabpanel-background-color: var(--ef-bg) !important;
+
+  scrollbar-width: thin !important;
+  scrollbar-color: var(--ef-scrollbar-hover) transparent !important;
+}
+
+#navigator-toolbox,
+#titlebar,
+#nav-bar,
+#TabsToolbar,
+#PersonalToolbar,
+#toolbar-menubar {
+  background-color: var(--ef-bg) !important;
+  background-image: none !important;
+  color: var(--ef-text) !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+#navigator-toolbox {
+  border-bottom: 1px solid var(--ef-accent) !important;
+}
+
+#nav-bar {
+  border: none !important;
+}
+
+#PersonalToolbar {
+  border-top: 1px solid var(--ef-border-disabled) !important;
+}
+
+#browser,
+#appcontent,
+#tabbrowser-tabbox,
+#tabbrowser-tabpanels,
+.browserContainer {
+  background-color: var(--ef-bg) !important;
+}
+
+.browserContainer {
+  border: none !important;
+}
+
+#tabbrowser-tabbox {
+  padding: 12px !important;
+  border-radius: 0 !important;
+}
+
+#tabbrowser-tabpanels {
+  border: 1px solid var(--ef-accent) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+:root:has(#sidebar-container:not([hidden]):not([sidebar-positionend])) #tabbrowser-tabbox,
+:root:has(#sidebar-box:not([hidden]):not([sidebar-positionend])) #tabbrowser-tabbox {
+  padding-inline-start: 0 !important;
+}
+
+:root:has(#sidebar-container[sidebar-positionend]:not([hidden])) #tabbrowser-tabbox,
+:root:has(#sidebar-box[sidebar-positionend]:not([hidden])) #tabbrowser-tabbox {
+  padding-inline-end: 0 !important;
+}
+
+:root[inFullscreen] #tabbrowser-tabbox,
+:root[inDOMFullscreen] #tabbrowser-tabbox {
+  padding: 0 !important;
+}
+
+:root[inFullscreen] #tabbrowser-tabpanels,
+:root[inDOMFullscreen] #tabbrowser-tabpanels {
+  border: none !important;
+}
+
+#urlbar-background,
+#searchbar {
+  background-color: var(--ef-bg) !important;
+  background-image: none !important;
+  border: 1px solid var(--ef-border-variant) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+#urlbar:hover > #urlbar-background,
+#searchbar:hover {
+  border-color: var(--ef-border-focused) !important;
+}
+
+#urlbar[focused="true"] > #urlbar-background,
+#urlbar:focus-within > #urlbar-background {
+  border-color: var(--ef-accent) !important;
+}
+
+#urlbar-input,
+#searchbar {
+  color: var(--ef-text) !important;
+  caret-color: var(--ef-accent) !important;
+}
+
+#urlbar-input::placeholder,
+#searchbar::placeholder {
+  color: var(--ef-text-placeholder) !important;
+}
+
+#urlbar-results,
+.urlbarView {
+  background-color: var(--ef-bg) !important;
+  background-image: none !important;
+  border: 1px solid var(--ef-border-variant) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.urlbarView-row {
+  border-radius: 0 !important;
+}
+
+.urlbarView-row:hover {
+  background-color: var(--ef-element-hover) !important;
+}
+
+.urlbarView-row[selected] {
+  background-color: var(--ef-element-selected) !important;
+  color: var(--ef-text) !important;
+}
+
+.urlbarView-url,
+.urlbarView-url[selected] {
+  color: var(--ef-accent) !important;
+}
+
+.urlbarView-title,
+.urlbarView-title[selected] {
+  color: var(--ef-text) !important;
+}
+
+.urlbarView-title-separator {
+  color: var(--ef-text-muted) !important;
+}
+
+.urlbarView-action {
+  color: var(--ef-text-muted) !important;
+}
+
+.search-one-offs {
+  background-color: var(--ef-bg) !important;
+  border-top: 1px solid var(--ef-border-disabled) !important;
+  border-radius: 0 !important;
+}
+
+.searchbar-engine-one-off-item:hover {
+  background-color: var(--ef-element-hover) !important;
+}
+
+#identity-box,
+#tracking-protection-icon-container,
+#page-action-buttons {
+  border-radius: 0 !important;
+}
+
+#identity-box:hover,
+#tracking-protection-icon-container:hover {
+  background-color: var(--ef-element-hover) !important;
+}
+
+#urlbar-zoom-button {
+  background-color: var(--ef-element) !important;
+  border: 1px solid var(--ef-border-disabled) !important;
+  border-radius: 0 !important;
+  color: var(--ef-text) !important;
+}
+
+#tabbrowser-tabs,
+#vertical-tabs {
+  background-color: var(--ef-bg) !important;
+}
+
+#tabbrowser-tabs[orient="vertical"] {
+  padding: 4px !important;
+}
+
+#tabbrowser-tabs[orient="vertical"] .tabbrowser-tab {
+  margin-block: 1px !important;
+}
+
+.tab-background {
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  outline: 1px solid transparent !important;
+  outline-offset: -1px !important;
+  box-shadow: none !important;
+}
+
+#tabbrowser-tabs .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected], [multiselected]) {
+  background-color: var(--ef-element-hover) !important;
+  outline-color: var(--ef-border-disabled) !important;
+}
+
+#tabbrowser-tabs .tabbrowser-tab[selected] > .tab-stack > .tab-background,
+#tabbrowser-tabs .tabbrowser-tab[visuallyselected] > .tab-stack > .tab-background {
+  background-color: var(--ef-bg) !important;
+  outline-color: var(--ef-accent) !important;
+}
+
+#tabbrowser-tabs .tabbrowser-tab[multiselected] > .tab-stack > .tab-background {
+  background-color: var(--ef-element-selected) !important;
+  outline-color: var(--ef-border-focused) !important;
+}
+
+.tabbrowser-tab .tab-label {
+  color: var(--ef-text-muted) !important;
+}
+
+.tabbrowser-tab:hover .tab-label,
+.tabbrowser-tab[selected] .tab-label,
+.tabbrowser-tab[visuallyselected] .tab-label {
+  color: var(--ef-text) !important;
+}
+
+.tab-close-button {
+  border-radius: 0 !important;
+  color: var(--ef-icon-muted) !important;
+}
+
+.tab-close-button:hover {
+  background-color: var(--ef-element-hover) !important;
+  color: var(--ef-text) !important;
+}
+
+.tab-close-button:hover:active {
+  background-color: var(--ef-red) !important;
+  color: var(--ef-black) !important;
+}
+
+#tabs-newtab-button,
+#vertical-tabs-newtab-button {
+  border-radius: 0 !important;
+  color: var(--ef-text-muted) !important;
+}
+
+#tabs-newtab-button:hover,
+#vertical-tabs-newtab-button:hover {
+  background-color: var(--ef-element-hover) !important;
+  color: var(--ef-accent) !important;
+}
+
+.tab-group-label,
+.tab-group-label-container {
+  border-radius: 0 !important;
+}
+
+.tab-group-line {
+  background-color: var(--ef-border-variant) !important;
+}
+
+#sidebar-container,
+#sidebar-box,
+#sidebar,
+#sidebar-header,
+#sidebar-launcher,
+sidebar-main {
+  background-color: var(--ef-bg) !important;
+  color: var(--ef-text) !important;
+  border-radius: 0 !important;
+}
+
+#sidebar-header {
+  border-bottom: 1px solid var(--ef-border-disabled) !important;
+}
+
+#sidebar-splitter,
+#sidebar-launcher-splitter {
+  background-color: var(--ef-border-disabled) !important;
+  border: none !important;
+  width: 1px !important;
+  min-width: 1px !important;
+  max-width: 1px !important;
+}
+
+#sidebar-switcher-target:hover {
+  background-color: var(--ef-element-hover) !important;
+}
+
+#sidebar-close:hover {
+  background-color: var(--ef-red) !important;
+  color: var(--ef-black) !important;
+}
+
+sidebar-main {
+  --button-size-icon: 0px !important;
+  --button-min-height: 0px !important;
+  --sidebar-launcher-button-padding-inline: 0px !important;
+  visibility: hidden !important;
+}
+
+sidebar-main #vertical-tabs {
+  visibility: visible !important;
+}
+
+menupopup,
+panel {
+  --panel-background-color: var(--ef-bg) !important;
+  --panel-border-color: var(--ef-border-variant) !important;
+  --panel-text-color: var(--ef-text) !important;
+  --panel-border-radius: 0 !important;
+  --panel-menuitem-border-radius: 0 !important;
+  background-color: var(--ef-bg) !important;
+  color: var(--ef-text) !important;
+  border: 1px solid var(--ef-border-variant) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.panel-arrowcontent,
+.panel-subview-body,
+.panel-viewstack,
+.panel-viewcontainer,
+.panel-header,
+.panel-footer {
+  background-color: var(--ef-bg) !important;
+  color: var(--ef-text) !important;
+  border-radius: 0 !important;
+}
+
+menupopup > menuitem,
+menupopup > menu,
+.subviewbutton,
+.panel-banner-item {
+  border-radius: 0 !important;
+}
+
+menupopup > menuitem[_moz-menuactive="true"],
+menupopup > menu[_moz-menuactive="true"],
+.subviewbutton:hover {
+  background-color: var(--ef-element-hover) !important;
+  color: var(--ef-text) !important;
+}
+
+menuseparator {
+  border-color: var(--ef-border-disabled) !important;
+}
+
+tooltip {
+  background-color: var(--ef-bg) !important;
+  color: var(--ef-text) !important;
+  border: 1px solid var(--ef-border-variant) !important;
+  border-radius: 0 !important;
+  appearance: none !important;
+}
+
+#statuspanel-label {
+  background-color: var(--ef-bg) !important;
+  color: var(--ef-text) !important;
+  border: 1px solid var(--ef-border-variant) !important;
+  border-radius: 0 !important;
+}
+
+findbar,
+.findbar-container {
+  background-color: var(--ef-bg) !important;
+  color: var(--ef-text) !important;
+  border-top: 1px solid var(--ef-border-disabled) !important;
+  border-radius: 0 !important;
+}
+
+.findbar-textbox {
+  background-color: var(--ef-bg) !important;
+  color: var(--ef-text) !important;
+  border: 1px solid var(--ef-border-variant) !important;
+  border-radius: 0 !important;
+}
+
+.notificationbox-stack,
+.infobar {
+  background-color: var(--ef-bg) !important;
+  color: var(--ef-text) !important;
+  border: 1px solid var(--ef-border-disabled) !important;
+  border-radius: 0 !important;
+}
+
+#appMenu-popup,
+#unified-extensions-panel,
+#downloadsPanel,
+#identity-popup,
+#permission-popup,
+#protections-popup,
+#editBookmarkPanel,
+#tab-history-popup,
+#contentAreaContextMenu,
+#toolbar-context-menu,
+#tabContextMenu,
+#new-tab-button-popup,
+#allTabsMenu-allTabsView,
+#sidebarMenu-popup,
+#sidebar-context-menu {
+  --panel-background-color: var(--ef-bg) !important;
+  --panel-border-color: var(--ef-border-variant) !important;
+  --panel-text-color: var(--ef-text) !important;
+  --panel-border-radius: 0 !important;
+  --panel-menuitem-border-radius: 0 !important;
+  background-color: var(--ef-bg) !important;
+  color: var(--ef-text) !important;
+  border: 1px solid var(--ef-border-variant) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+#customization-container {
+  background-color: var(--ef-bg) !important;
+  color: var(--ef-text) !important;
+}
+
+#placesToolbar,
+#placesView,
+#placesList,
+#placeContent,
+#placesMenu {
+  background-color: var(--ef-bg) !important;
+  color: var(--ef-text) !important;
+  border-color: var(--ef-border-disabled) !important;
+}
+
+#placeContent treechildren::-moz-tree-row {
+  background-color: var(--ef-bg) !important;
+  color: var(--ef-text) !important;
+}
+
+#placeContent treechildren::-moz-tree-row(selected) {
+  background-color: var(--ef-element-selected) !important;
+  color: var(--ef-text) !important;
+}
+
+#placeContent treechildren::-moz-tree-cell-text {
+  color: var(--ef-text) !important;
+}
+
+#placeContent treechildren::-moz-tree-cell-text(selected) {
+  color: var(--ef-text) !important;
+}
+
+.titlebar-buttonbox-container {
+  background-color: transparent !important;
+}
+
+.titlebar-button {
+  background-color: transparent !important;
+  color: var(--ef-icon) !important;
+  border-radius: 0 !important;
+}
+
+.titlebar-button:hover {
+  background-color: var(--ef-element-hover) !important;
+  color: var(--ef-text) !important;
+}
+
+.titlebar-button.close:hover {
+  background-color: var(--ef-red) !important;
+  color: var(--ef-black) !important;
+}
+
+scrollbar {
+  background-color: transparent !important;
+}
+
+scrollbar thumb {
+  background-color: var(--ef-scrollbar) !important;
+  border-radius: 0 !important;
+}
+
+scrollbar thumb:hover {
+  background-color: var(--ef-scrollbar-hover) !important;
+}
+
+scrollbar scrollbarbutton {
+  display: none !important;
+}
+
+#ipprotection-button,
+#fxa-toolbar-menu-button,
+#reset-pbm-toolbar-button,
+#smartwindow-group-tabs-button,
+#ai-window-toggle,
+#alltabs-button,
+#firefox-view-button,
+#back-button,
+#forward-button,
+#reload-button,
+#stop-button,
+#home-button,
+#library-button,
+#downloads-button,
+#unified-extensions-button,
+#PanelUI-menu-button,
+#sidebar-button,
+#nav-bar-overflow-button,
+#page-action-buttons,
+#tracking-protection-icon-container,
+#identity-icon-label,
+#urlbar-search-mode-indicator-close,
+#urlbar-zoom-button,
+#urlbar-go-button,
+#urlbar-reload-button,
+#urlbar-stop-button,
+#PersonalToolbar,
+#sidebar-header,
+#sidebar-launcher,
+#sidebar-launcher-splitter,
+#searchbar,
+#search-container,
+#wrapper-searchbar,
+#wrapper-back-button,
+#wrapper-forward-button,
+#wrapper-reload-button,
+#wrapper-stop-button,
+#wrapper-home-button,
+#wrapper-library-button,
+#wrapper-downloads-button,
+#wrapper-unified-extensions-button,
+#wrapper-PanelUI-menu-button,
+#wrapper-sidebar-button,
+#wrapper-alltabs-button,
+#wrapper-firefox-view-button,
+#wrapper-fxa-toolbar-menu-button,
+#wrapper-ipprotection-button,
+#wrapper-reset-pbm-toolbar-button,
+#wrapper-smartwindow-group-tabs-button,
+#wrapper-ai-window-toggle,
+[id^="customizableui-special-spring"],
+[id^="customizableui-special-separator"] {
+  display: none !important;
+}
+
+::selection {
+  background-color: var(--ef-accent) !important;
+  color: var(--ef-black) !important;
+}

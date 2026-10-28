@@ -1,0 +1,23 @@
+{
+  "showSheetButton": "true",
+  "folder": "/",
+  "fileLocationMode": "specified",
+  "fileSubFolder": "",
+  "excelFilenamePrefix": "Excel ",
+  "excelFilenameDateTime": "YYYY-MM-DD HH.mm.ss",
+  "sheetHeight": "300",
+  "sheetHeightMode": "auto",
+  "rowHeight": "25",
+  "colWidth": "100",
+  "authorizationCode": "",
+  "embedLinkShowFooter": "false",
+  "embedLinkOpenMode": "split-right",
+  "numberFormatLocal": "en",
+  "mobileRenderMode": "desktop",
+  "darkModal": "dark",
+  "isBigSheet": "false",
+  "fontFolder": "",
+  "rtlDirection": "ltr",
+  "defaultFontFamily": "",
+  "selectedFontName": ""
+}

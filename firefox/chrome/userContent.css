@@ -1,0 +1,618 @@
+@import url("palette.css");
+
+@-moz-document url-prefix("about:"), url-prefix("chrome://browser/content/sidebar/"), url-prefix("chrome://browser/content/places/"), url-prefix("chrome://browser/content/syncedtabs/"), url-prefix("chrome://mozapps/") {
+  :root {
+    color-scheme: dark !important;
+
+    --color-accent-primary: var(--ef-accent) !important;
+    --color-accent-primary-hover: var(--ef-accent-hover) !important;
+    --color-accent-primary-active: var(--ef-accent-active) !important;
+    --color-accent-primary-selected: var(--ef-accent) !important;
+    --color-accent-attention: var(--ef-yellow) !important;
+
+    --focus-outline-color: var(--ef-accent) !important;
+    --focus-outline-width: 1px !important;
+    --focus-outline-offset: 1px !important;
+
+    --link-color: var(--ef-accent) !important;
+    --link-color-hover: var(--ef-accent-hover) !important;
+    --link-color-active: var(--ef-accent-active) !important;
+    --link-color-visited: var(--ef-magenta) !important;
+
+    --background-color-canvas: var(--ef-bg) !important;
+    --background-color-box: var(--ef-bg) !important;
+    --background-color-box-info: var(--ef-bg) !important;
+    --background-color-list-item-hover: var(--ef-element-selected) !important;
+    --background-color-success: #1A2416 !important;
+    --background-color-warning: #2A2816 !important;
+    --background-color-critical: #2A1A1A !important;
+    --background-color-information: #1A202A !important;
+    --background-color-overlay: #1e1e2eB3 !important;
+
+    --text-color: var(--ef-text) !important;
+    --text-color-deemphasized: var(--ef-text-muted) !important;
+    --text-color-disabled: var(--ef-text-disabled) !important;
+    --text-color-error: var(--ef-red) !important;
+    --text-color-list-item-hover: var(--ef-text) !important;
+    --text-color-accent-primary-selected: var(--ef-black) !important;
+
+    --icon-color: var(--ef-icon) !important;
+    --icon-color-critical: var(--ef-red) !important;
+    --icon-color-information: var(--ef-cyan) !important;
+    --icon-color-success: var(--ef-accent) !important;
+    --icon-color-warning: var(--ef-warning) !important;
+
+    --border-color: var(--ef-border-variant) !important;
+    --border-color-deemphasized: var(--ef-border-disabled) !important;
+    --border-color-interactive: var(--ef-border-variant) !important;
+    --border-color-interactive-hover: var(--ef-border-focused) !important;
+    --border-color-interactive-active: var(--ef-accent) !important;
+    --border-color-interactive-disabled: var(--ef-border-disabled) !important;
+    --border-color-selected: var(--ef-accent) !important;
+    --border-color-error: var(--ef-red) !important;
+    --border-color-transparent: transparent !important;
+    --border-width: 1px !important;
+
+    --border-radius-xsmall: 0 !important;
+    --border-radius-small: 0 !important;
+    --border-radius-medium: 0 !important;
+    --border-radius-large: 0 !important;
+    --border-radius-xlarge: 0 !important;
+    --border-radius-circle: 0 !important;
+
+    --box-shadow-level-1: none !important;
+    --box-shadow-level-2: none !important;
+    --box-shadow-level-3: none !important;
+    --box-shadow-level-4: none !important;
+
+    --button-background-color: var(--ef-element) !important;
+    --button-background-color-hover: var(--ef-element-hover) !important;
+    --button-background-color-active: var(--ef-element-active) !important;
+    --button-background-color-selected: var(--ef-element-selected) !important;
+    --button-background-color-disabled: var(--ef-element-disabled) !important;
+    --button-background-color-ghost: transparent !important;
+    --button-background-color-ghost-hover: var(--ef-element-hover) !important;
+    --button-background-color-ghost-active: var(--ef-element-active) !important;
+    --button-background-color-primary: var(--ef-accent) !important;
+    --button-background-color-primary-hover: var(--ef-accent-hover) !important;
+    --button-background-color-primary-active: var(--ef-accent-active) !important;
+    --button-background-color-destructive: var(--ef-red) !important;
+    --button-background-color-destructive-hover: var(--ef-red-hover) !important;
+    --button-background-color-destructive-active: var(--ef-red-active) !important;
+    --button-text-color: var(--ef-text) !important;
+    --button-text-color-hover: var(--ef-text) !important;
+    --button-text-color-active: var(--ef-text) !important;
+    --button-text-color-disabled: var(--ef-text-disabled) !important;
+    --button-text-color-ghost: var(--ef-text) !important;
+    --button-text-color-ghost-hover: var(--ef-text) !important;
+    --button-text-color-ghost-active: var(--ef-text) !important;
+    --button-text-color-primary: var(--ef-black) !important;
+    --button-text-color-primary-hover: var(--ef-black) !important;
+    --button-text-color-primary-active: var(--ef-black) !important;
+    --button-text-color-destructive: var(--ef-black) !important;
+    --button-text-color-destructive-hover: var(--ef-black) !important;
+    --button-text-color-destructive-active: var(--ef-black) !important;
+    --button-border-color: var(--ef-border-variant) !important;
+    --button-border-color-hover: var(--ef-border-focused) !important;
+    --button-border-color-active: var(--ef-accent) !important;
+    --button-border-color-primary: transparent !important;
+    --button-border-color-ghost: transparent !important;
+    --button-border-color-ghost-hover: transparent !important;
+    --button-border-color-ghost-active: transparent !important;
+    --button-border-radius: 0 !important;
+
+    --input-background-color: var(--ef-bg) !important;
+    --input-border-color: var(--ef-border-variant) !important;
+    --input-border-radius: 0 !important;
+    --input-search-border-radius: 0 !important;
+    --input-text-color: var(--ef-text) !important;
+
+    --panel-background-color: var(--ef-bg) !important;
+    --panel-border-color: var(--ef-border-variant) !important;
+    --panel-text-color: var(--ef-text) !important;
+    --panel-border-radius: 0 !important;
+    --panel-menuitem-border-radius: 0 !important;
+    --panel-separator-color: var(--ef-border-disabled) !important;
+    --panel-box-shadow: none !important;
+    --panel-footer-background-color: var(--ef-element) !important;
+
+    --popup-background-color: var(--ef-bg) !important;
+    --popup-border-color: var(--ef-border-variant) !important;
+    --popup-border-radius: 0 !important;
+    --popup-box-shadow: none !important;
+
+    --card-background-color: var(--ef-bg) !important;
+    --card-border-color: var(--ef-border-disabled) !important;
+    --card-border-radius: 0 !important;
+    --card-border-radius-compact: 0 !important;
+    --card-box-shadow: none !important;
+    --card-box-shadow-hover: none !important;
+
+    --table-background-color: var(--ef-bg) !important;
+    --table-border-color: var(--ef-border-disabled) !important;
+    --table-header-background-color: var(--ef-accent) !important;
+    --table-header-text-color: var(--ef-black) !important;
+    --table-row-background-color: var(--ef-bg) !important;
+    --table-row-background-color-alternate: var(--ef-bg) !important;
+
+    --newtab-background-color: var(--ef-bg) !important;
+    --newtab-background-color-secondary: var(--ef-bg) !important;
+    --newtab-text-primary-color: var(--ef-text) !important;
+    --newtab-text-secondary-color: var(--ef-text-muted) !important;
+    --newtab-text-secondary-text: var(--ef-text-muted) !important;
+    --newtab-primary-action-background: var(--ef-accent) !important;
+    --newtab-primary-element-hover-color: var(--ef-accent-hover) !important;
+    --newtab-primary-element-active-color: var(--ef-accent-active) !important;
+    --newtab-primary-element-text-color: var(--ef-black) !important;
+    --newtab-primary-action-background-pocket: var(--ef-accent) !important;
+    --newtab-primary-action-background-pocket-dimmed: var(--ef-accent-20) !important;
+    --newtab-primary-element-hover-pocket-color: var(--ef-accent-hover) !important;
+    --newtab-wordmark-color: var(--ef-accent) !important;
+    --newtab-element-hover-color: var(--ef-element-hover) !important;
+    --newtab-element-active-color: var(--ef-element-active) !important;
+    --newtab-element-secondary-color: var(--ef-element) !important;
+    --newtab-element-secondary-hover-color: var(--ef-element-hover) !important;
+    --newtab-element-secondary-active-color: var(--ef-element-active) !important;
+    --newtab-button-background: var(--ef-element) !important;
+    --newtab-button-hover-background: var(--ef-element-hover) !important;
+    --newtab-button-active-background: var(--ef-element-active) !important;
+    --newtab-button-text: var(--ef-text) !important;
+    --newtab-button-static-background: var(--ef-element) !important;
+    --newtab-button-static-hover-background: var(--ef-element-hover) !important;
+    --newtab-button-static-active-background: var(--ef-element-active) !important;
+    --newtab-card-placeholder-background-color: var(--ef-element) !important;
+    --newtab-section-card-box-shadow-color: transparent !important;
+    --newtab-inner-box-shadow-color: transparent !important;
+    --newtab-wallpaper: none !important;
+    --newtab-wallpaper-color: var(--ef-bg) !important;
+    --newtab-overlay-color: var(--ef-bg) !important;
+    --newtab-layout-panel-background: var(--ef-bg) !important;
+    --newtab-text-topic-label-color: var(--ef-text-muted) !important;
+    --newtab-status-success: var(--ef-accent) !important;
+    --newtab-status-error: var(--ef-red) !important;
+
+    scrollbar-width: thin !important;
+    scrollbar-color: var(--ef-scrollbar-hover) transparent !important;
+  }
+
+  * {
+    border-radius: 0 !important;
+  }
+
+  body {
+    background-color: var(--ef-bg) !important;
+    background-image: none !important;
+    color: var(--ef-text) !important;
+  }
+
+  a {
+    color: var(--ef-accent) !important;
+  }
+
+  a:hover {
+    color: var(--ef-accent-hover) !important;
+  }
+
+  input,
+  textarea,
+  select,
+  menulist {
+    background-color: var(--ef-bg) !important;
+    color: var(--ef-text) !important;
+    border: 1px solid var(--ef-border-variant) !important;
+    border-radius: 0 !important;
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus,
+  menulist:focus {
+    border-color: var(--ef-accent) !important;
+    outline: 1px solid var(--ef-accent) !important;
+    outline-offset: -1px !important;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"],
+  progress {
+    accent-color: var(--ef-accent) !important;
+  }
+
+  button {
+    border-radius: 0 !important;
+  }
+
+  dialog {
+    background-color: var(--ef-bg) !important;
+    color: var(--ef-text) !important;
+    border: 1px solid var(--ef-border-variant) !important;
+    border-radius: 0 !important;
+  }
+
+  pre,
+  code {
+    background-color: var(--ef-bg) !important;
+    color: var(--ef-text) !important;
+  }
+
+  hr {
+    border-color: var(--ef-border-disabled) !important;
+  }
+
+  mark {
+    background-color: var(--ef-accent-40) !important;
+    color: var(--ef-text) !important;
+  }
+
+  fieldset,
+  groupbox {
+    border-color: var(--ef-border-disabled) !important;
+  }
+
+  richlistbox,
+  tree,
+  listbox {
+    background-color: var(--ef-bg) !important;
+    color: var(--ef-text) !important;
+  }
+
+  richlistitem[selected],
+  treechildren::-moz-tree-row(selected) {
+    background-color: var(--ef-element-selected) !important;
+    color: var(--ef-text) !important;
+  }
+
+  table {
+    background-color: var(--ef-bg) !important;
+    color: var(--ef-text) !important;
+  }
+
+  th {
+    background-color: var(--ef-accent) !important;
+    color: var(--ef-black) !important;
+  }
+
+  tr:hover {
+    background-color: var(--ef-element-hover) !important;
+  }
+
+  scrollbar {
+    background-color: transparent !important;
+  }
+
+  scrollbar thumb {
+    background-color: var(--ef-scrollbar) !important;
+    border-radius: 0 !important;
+  }
+
+  scrollbar thumb:hover {
+    background-color: var(--ef-scrollbar-hover) !important;
+  }
+}
+
+@-moz-document url-prefix("about:newtab"), url-prefix("about:home") {
+  body,
+  .outer-wrapper,
+  .body-wrapper,
+  .ds-outer-wrapper,
+  .newtab-main {
+    background-color: var(--ef-bg) !important;
+    background-image: none !important;
+    color: var(--ef-text) !important;
+  }
+
+  .wallpaper {
+    display: none !important;
+  }
+
+  .search-wrapper .search-handoff-button,
+  .search-wrapper input,
+  .search-handoff-button {
+    background-color: var(--ef-bg) !important;
+    border: 1px solid var(--ef-border-variant) !important;
+    border-radius: 0 !important;
+    color: var(--ef-text) !important;
+    box-shadow: none !important;
+  }
+
+  .search-wrapper .search-handoff-button:focus-within,
+  .search-wrapper input:focus {
+    border-color: var(--ef-accent) !important;
+    outline: 1px solid var(--ef-accent) !important;
+    outline-offset: -1px !important;
+  }
+
+  .search-wrapper .search-handoff-button .fake-textbox {
+    color: var(--ef-text-placeholder) !important;
+  }
+
+  .top-site-outer .tile {
+    background-color: var(--ef-bg) !important;
+    border: 1px solid var(--ef-border-disabled) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .top-site-outer:hover .tile,
+  .top-site-outer:focus-within .tile {
+    border-color: var(--ef-accent) !important;
+    box-shadow: none !important;
+  }
+
+  .top-site-outer .title {
+    color: var(--ef-text) !important;
+  }
+
+  .top-site-outer .title .icon,
+  .top-site-outer .tile .icon-wrapper,
+  .top-site-outer .tile .icon {
+    background-color: var(--ef-element) !important;
+    border-radius: 0 !important;
+  }
+
+  .sponsored-label {
+    background-color: var(--ef-element) !important;
+    color: var(--ef-text-muted) !important;
+    border-radius: 0 !important;
+  }
+
+  .customize-menu,
+  .customize-menu .menu,
+  .customize-menu .menu-item {
+    background-color: var(--ef-bg) !important;
+    color: var(--ef-text) !important;
+    border-color: var(--ef-border-disabled) !important;
+  }
+
+  .section-title,
+  .section-title span {
+    color: var(--ef-text-muted) !important;
+  }
+
+  .card-outer,
+  .ds-card,
+  .ds-card .img-wrapper,
+  .ds-card .card-content {
+    background-color: var(--ef-bg) !important;
+    border-color: var(--ef-border-disabled) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .card-outer:hover,
+  .ds-card:hover {
+    border-color: var(--ef-border-variant) !important;
+  }
+
+  .context-menu {
+    background-color: var(--ef-bg) !important;
+    border: 1px solid var(--ef-border-variant) !important;
+    border-radius: 0 !important;
+    color: var(--ef-text) !important;
+  }
+
+  .context-menu-item:hover {
+    background-color: var(--ef-element-hover) !important;
+  }
+
+  .weather-card,
+  .weather-card .weather-card-content {
+    background-color: var(--ef-bg) !important;
+    border: 1px solid var(--ef-border-disabled) !important;
+    border-radius: 0 !important;
+  }
+
+  html,
+  body {
+    background-color: var(--ef-bg) !important;
+    background-image: none !important;
+    color: var(--ef-text) !important;
+    overflow: hidden !important;
+  }
+
+  body::before,
+  body::after,
+  .outer-wrapper::before,
+  .outer-wrapper::after {
+    display: none !important;
+  }
+
+  .logo-and-wordmark,
+  .logo,
+  .wordmark,
+  .top-sites,
+  .sections-list,
+  .discovery-stream,
+  .ds-layout,
+  .ds-card,
+  .top-stories-bottom-container,
+  .section-list,
+  .body-wrapper,
+  .weather-card,
+  .customize-menu,
+  dialog.customize-menu,
+  .customize-button,
+  .open-customization-button,
+  .personalize-button,
+  .personalizeButtonWrapper,
+  .sidebar-inline-start,
+  .sidebar-inline-end,
+  aside,
+  .widgets-sidebar,
+  .spaces-panel-backdrop,
+  .wallpaper-attribution,
+  .footer,
+  #footer,
+  .legal,
+  #voice-search-button,
+  .voice-search-button,
+  .search-wrapper .search-handoff-button .logo,
+  .search-wrapper .search-handoff-button .firefox-logo,
+  .content > *:not(.search-wrapper):not(.non-collapsible-section),
+  .container > *:not(.search-wrapper):not(.content-main) {
+    display: none !important;
+  }
+
+  .search-wrapper {
+    position: fixed !important;
+    inset: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    transform: none !important;
+  }
+
+  .search-wrapper .search-handoff-button,
+  .search-wrapper input {
+    width: min(680px, calc(100vw - 48px)) !important;
+    max-width: 680px !important;
+    height: 56px !important;
+    margin: 0 !important;
+    padding: 0 20px !important;
+    background-color: var(--ef-bg) !important;
+    background-image: none !important;
+    border: 1px solid var(--ef-border-variant) !important;
+    border-radius: 0 !important;
+    color: var(--ef-text) !important;
+    box-shadow: none !important;
+  }
+
+  .search-wrapper .search-handoff-button {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+  }
+
+  .search-wrapper .search-handoff-button:hover,
+  .search-wrapper input:hover {
+    border-color: var(--ef-border-focused) !important;
+  }
+
+  .search-wrapper .search-handoff-button .fake-textbox,
+  .search-wrapper input::placeholder {
+    color: var(--ef-text-placeholder) !important;
+    font-size: 16px !important;
+  }
+
+  .search-wrapper .search-handoff-button .fake-caret {
+    background-color: var(--ef-accent) !important;
+  }
+
+  .search-wrapper .search-handoff-button svg {
+    fill: var(--ef-icon) !important;
+    color: var(--ef-icon) !important;
+  }
+
+  .search-wrapper .search-inner-wrapper,
+  .search-wrapper moz-urlbar {
+    width: min(680px, calc(100vw - 48px)) !important;
+    max-width: 680px !important;
+    height: 56px !important;
+    margin: 0 !important;
+  }
+
+  .search-wrapper moz-urlbar {
+    --urlbar-height: 56px !important;
+    --urlbar-container-height: 56px !important;
+    --urlbar-border-radius: 0 !important;
+    background-color: var(--ef-bg) !important;
+    background-image: none !important;
+    border: 1px solid var(--ef-border-variant) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .search-wrapper moz-urlbar:focus-within {
+    border-color: var(--ef-accent) !important;
+    outline: 1px solid var(--ef-accent) !important;
+    outline-offset: -1px !important;
+  }
+}
+
+@-moz-document url("about:privatebrowsing") {
+  body {
+    background-color: var(--ef-bg) !important;
+    color: var(--ef-text) !important;
+  }
+
+  #search-handoff-button,
+  .search-handoff-button {
+    background-color: var(--ef-bg) !important;
+    border: 1px solid var(--ef-border-variant) !important;
+    border-radius: 0 !important;
+    color: var(--ef-text) !important;
+    box-shadow: none !important;
+  }
+
+  #search-handoff-button:focus-within,
+  .search-handoff-button:focus-within {
+    border-color: var(--ef-accent) !important;
+    outline: 1px solid var(--ef-accent) !important;
+    outline-offset: -1px !important;
+  }
+
+  .private-browsing-title,
+  .info-title {
+    color: var(--ef-text) !important;
+  }
+
+  .private-browsing-description,
+  .info-body {
+    color: var(--ef-text-muted) !important;
+  }
+
+  .promo,
+  .promo-info {
+    background-color: var(--ef-bg) !important;
+    border: 1px solid var(--ef-border-disabled) !important;
+    border-radius: 0 !important;
+  }
+}
+
+@-moz-document url-prefix("about:reader") {
+  :root {
+    --main-background: var(--ef-bg) !important;
+    --main-foreground: var(--ef-text) !important;
+    --primary-color: var(--ef-accent) !important;
+    --link-foreground: var(--ef-accent) !important;
+    --visited-link-foreground: var(--ef-magenta) !important;
+    --toolbar-border: var(--ef-border-disabled) !important;
+    --toolbar-button-background-hover: var(--ef-element-hover) !important;
+    --toolbar-button-background-active: var(--ef-element-active) !important;
+    --toolbar-button-foreground-hover: var(--ef-text) !important;
+    --toolbar-button-foreground-active: var(--ef-accent) !important;
+    --tooltip-background: var(--ef-bg) !important;
+    --tooltip-foreground: var(--ef-text) !important;
+    --tooltip-border: var(--ef-border-variant) !important;
+    --popup-background: var(--ef-bg) !important;
+    --popup-foreground: var(--ef-text) !important;
+    --popup-border: var(--ef-border-variant) !important;
+    --popup-line: var(--ef-border-disabled) !important;
+    --popup-button-background: var(--ef-element) !important;
+    --popup-button-foreground: var(--ef-text) !important;
+    --popup-button-background-hover: var(--ef-element-hover) !important;
+    --popup-button-background-active: var(--ef-element-active) !important;
+    --selected-background: var(--ef-accent-40) !important;
+    --text-selected-background: var(--ef-accent) !important;
+    --text-selected-foreground: var(--ef-black) !important;
+    --outline-focus-color: var(--ef-accent) !important;
+    --icon-fill: var(--ef-icon) !important;
+    --icon-disabled-fill: var(--ef-icon-disabled) !important;
+  }
+
+  body {
+    background-color: var(--ef-bg) !important;
+    color: var(--ef-text) !important;
+  }
+}
+
+::selection {
+  background-color: var(--ef-accent) !important;
+  color: var(--ef-black) !important;
+}

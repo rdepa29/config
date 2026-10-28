@@ -1,0 +1,287 @@
+{
+  "main": {
+    "id": "b964bc5bdd2f2677",
+    "type": "split",
+    "children": [
+      {
+        "id": "a3fcf695b6bed282",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b5bd86e13dbda66a",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ],
+        "stacked": true
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "db471e9f05590796",
+    "type": "split",
+    "children": [
+      {
+        "id": "ac87d05f8226caf6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9f04629bcaa70633",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "1d20d674ee882d6c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "70560254f0b2d85b",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 266.3333435058594
+  },
+  "right": {
+    "id": "28fa45d9c43a72cb",
+    "type": "split",
+    "children": [
+      {
+        "id": "6332968ad0cc0dcf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6cdb13f354f8ac76",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "US History/Unit 2 - Foundations/Class Notes/Tuesday, September 15, 2026 - 2.01.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "79d6ec94e68be459",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "US History/Unit 2 - Foundations/Class Notes/Tuesday, September 15, 2026 - 2.01.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "f98dd46fda943c17",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "48c86cd3b94fc475",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "5eebc5f8d06f7839",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "US History/Unit 2 - Foundations/Class Notes/Tuesday, September 15, 2026 - 2.01.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          },
+          {
+            "id": "4be41d62d9c79b4d",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "10f690769fccba27",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "calendar"
+            }
+          },
+          {
+            "id": "1c38c690f3b88450",
+            "type": "leaf",
+            "state": {
+              "type": "extended-headings-outline",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "extended-headings-outline"
+            }
+          },
+          {
+            "id": "a76ce2b3969930f7",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 8
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "workspaces:Manage workspace layouts": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "audio-recorder:Start/stop recording": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "realclaudian:Open Claudian": false,
+      "obsidian-importer:Import notes": false,
+      "obsidian-git:Open Git source control": false,
+      "sheet-plus:Create excel file": false,
+      "extended-headings:Open extended outline": false
+    }
+  },
+  "active": "b5bd86e13dbda66a",
+  "lastOpenFiles": [
+    "Integrated Math Accelerated 350/Unit 3 - Trigonometric Functions/3.1 - 10-27-2026.md",
+    "US History/Unit 3 - Expansions/Class Notes/3.07 - 10-26-2026.md",
+    "Integrated Math Accelerated 350/Unit 3 - Trigonometric Functions",
+    "US History/Unit 3 - Expansions/Class Notes/3.04 - 10-14-2026.md",
+    "US History/Unit 3 - Expansions/Class Notes/3.03 - 10-12-2026.md",
+    "US History/Unit 3 - Expansions/Class Notes/3.01 - 10-07-2026.md",
+    "US History/Unit 2 - Foundations/Unit 2 - Foundations Notes.md",
+    "Integrated Chemistry Accelerated 251/Unit 2 - Thermochemistry & Solubility/KMT - 10-21-2026.md",
+    "US History/Unit 2 - Foundations/Class Notes/2.01 - 09-15-2026.md",
+    "US History/Unit 2 - Foundations/Class Notes/2.03 - 09-23-2026.md",
+    "US History/Unit 2 - Foundations/Class Notes/2.02 - 09-17-2026.md",
+    "US History/Unit 3 - Expansions/Class Notes/3.02 - 10-08-2026.md",
+    "US History/Unit 3 - Expansions/Unit 3 - Expansions Notes.md",
+    "US History/Unit 2 - Foundations/Class Notes/2.06 - 10-02-2026.md",
+    "US History/Unit 3 - Expansions/Class Notes",
+    "US History/Unit 3 - Expansions",
+    "US History/Unit 2 - Foundations/Class Notes/2.05 - 09-28-2026.md",
+    "US History/Unit 2 - Foundations/Class Notes/2.04 - 09-25-2026.md",
+    "Untitled.canvas",
+    "The.md",
+    "Integrated Chemistry Accelerated 251/Unit 1 - Molecular Shape & Properties/1.3 - Macromolecules",
+    "Integrated Chemistry Accelerated 251/Unit 1 - Molecular Shape & Properties/1.1 - Matter's Structure/1.1 - Matter's Structure Notes.md",
+    "2026/09/17.md",
+    "2026/09",
+    "2026",
+    "Integrated Chemistry Accelerated 251/Unit 3 - Chemical Reactions & Stoichiometry",
+    "Integrated Chemistry Accelerated 251/Unit 1 - Molecular Shape & Properties/1.2 - Polarity & Properties",
+    "Integrated Chemistry Accelerated 251/Unit 1 - Molecular Shape & Properties/1.1 - Matter's Structure",
+    "Integrated Chemistry Accelerated 251/Unit 2 - Thermochemistry & Solubility",
+    "Untitled.md",
+    "US History/Unit 2 - Foundations/2026-09-15.md",
+    "OneNote/Science (On 9-3-2026)/10th Grade/Unit 1/Molecular Orbitals Intro Notes KEY.md",
+    "OneNote/Science (On 9-3-2026)/10th Grade/Unit 1/Molecular Orbitals Intro Notes KEY image.png",
+    "OneNote/Science (On 9-3-2026)/10th Grade/Unit 1.md",
+    "OneNote/Science (On 9-3-2026)/10th Grade/Summer Homework.md",
+    "OneNote/Science (On 9-3-2026)/9th Grade S2.md",
+    "OneNote/Science (On 9-3-2026)/10th Grade.md",
+    "OneNote/Spanish (On 8-16-2026)/Spanish 200/U4.md",
+    "OneNote/Spanish (On 8-16-2026)/Spanish 200/U4 - Ink.svg",
+    "OneNote/Spanish (On 8-16-2026)/Spanish 200/U2/Caperucita Roja (sub day) (2) - Ink.svg",
+    "OneNote/Spanish (On 8-16-2026)/Spanish 200/U0/Grammar Review for 200 (Present Tense) - Ink.svg",
+    "OneNote/Science (On 9-8-2026)/10th Grade/Unit 1/Molecular Orbitals Intro Notes KEY image 2.png",
+    "OneNote/Science (On 9-8-2026)/10th Grade/Unit 1/Molecular Orbitals Intro Notes KEY image 1.png",
+    "OneNote/Science (On 9-8-2026)/10th Grade/Unit 1/Molecular Orbitals Intro Notes KEY image.png",
+    "OneNote/Science (On 9-8-2026)/10th Grade/Summer Homework/Lab Equipment Scavenger Hunt – Summer Homework - Ink.svg",
+    "OneNote/Science (On 9-8-2026)/10th Grade/Summer Homework/lab_equipment_diagrams image 1.png",
+    "OneNote/Science (On 9-8-2026)/10th Grade/Summer Homework/lab_equipment_diagrams image.png"
+  ]
+}

@@ -17,10 +17,9 @@ config.keys = {
 
 config.window_decorations = 'RESIZE'
 
--- Opacity and Backdrop Settings matching Everforest
-config.window_background_opacity = 0.0
+config.window_background_opacity = 1.0
 config.win32_system_backdrop = 'Acrylic'
-config.win32_acrylic_accent_color = '#2d353b' -- Matches Everforest background base
+config.win32_acrylic_accent_color = '#1e1e2e'
 
 config.default_cursor_style = 'BlinkingBar'
 config.cursor_blink_rate = 600
@@ -28,22 +27,21 @@ config.cursor_blink_ease_in = 'Constant'
 config.cursor_blink_ease_out = 'Constant'
 config.cursor_thickness = '2px'
 
--- Everforest Dark Color Palette
 config.colors = {
-  foreground = '#d3c6aa',
-  background = '#2d353b',
-  cursor_bg = '#a7c080',
-  cursor_border = '#a7c080',
-  cursor_fg = '#2d353b',
-  selection_bg = '#475258',
-  selection_fg = '#d3c6aa',
+  foreground = '#E6F2DE',
+  background = '#1e1e2e',
+  cursor_bg = '#C4FFB0',
+  cursor_border = '#C4FFB0',
+  cursor_fg = '#1e1e2e',
+  selection_bg = '#3F4C3B',
+  selection_fg = '#C4FFB0',
   ansi = {
-    '#343f44', '#e67e80', '#a7c080', '#dbbc7f',
-    '#7fbbb3', '#d699b6', '#83c092', '#859289',
+    '#2F382C', '#FFB8B8', '#C4FFB0', '#FAF3B8',
+    '#BCD3FF', '#E0CCFF', '#B8E8F0', '#E6F2DE',
   },
   brights = {
-    '#475258', '#e67e80', '#a7c080', '#dbbc7f',
-    '#7fbbb3', '#d699b6', '#83c092', '#9da9a0',
+    '#7C8878', '#FFCECE', '#D6FFC8', '#FCF8D0',
+    '#D2E0FF', '#EDDFFF', '#D6F2F8', '#F5F4EC',
   },
 }
 

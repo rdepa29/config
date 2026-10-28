@@ -1,0 +1,45 @@
+:root {
+  --ef-black: #1e1e2e;
+  --ef-bg: #1e1e2e;
+  --ef-surface: #1e1e2e;
+
+  --ef-accent: #C4FFB0;
+  --ef-accent-hover: #D6FFC8;
+  --ef-accent-active: #AEE89C;
+  --ef-accent-20: #C4FFB033;
+  --ef-accent-40: #C4FFB066;
+
+  --ef-text: #E6F2DE;
+  --ef-text-muted: #B9CDB0;
+  --ef-text-placeholder: #93A08C;
+  --ef-text-disabled: #7C8878;
+
+  --ef-icon: #D2D8CE;
+  --ef-icon-muted: #B9CDB0;
+  --ef-icon-disabled: #7C8878;
+
+  --ef-element: #333E2E;
+  --ef-element-hover: #3D4738;
+  --ef-element-active: #4C5A48;
+  --ef-element-selected: #3F4C3B;
+  --ef-element-disabled: #232A20;
+
+  --ef-border: #C4FFB0;
+  --ef-border-variant: #8FA284;
+  --ef-border-focused: #9AD98A;
+  --ef-border-selected: #7FA870;
+  --ef-border-disabled: #2F382C;
+
+  --ef-red: #FFB8B8;
+  --ef-red-hover: #FFCECE;
+  --ef-red-active: #F2A6A0;
+  --ef-yellow: #FAF3B8;
+  --ef-blue: #BCD3FF;
+  --ef-magenta: #E0CCFF;
+  --ef-cyan: #B8E8F0;
+  --ef-warning: #FFD9B0;
+  --ef-info: #BDE8B0;
+
+  --ef-scrollbar: #C6CCC24C;
+  --ef-scrollbar-hover: #C6CCC280;
+}

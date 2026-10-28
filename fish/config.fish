@@ -13,7 +13,7 @@ end
 zoxide init fish | source
 
 if status is-interactive
-    # Commands to run in interactive sessions can go here
+    source ~/.config/fish/conf.d/99-everforest.fish
 end
 
 # custom functions

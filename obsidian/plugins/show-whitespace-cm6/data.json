@@ -1,0 +1,14 @@
+{
+  "disablePluginStyles": false,
+  "enabled": true,
+  "showLineEndings": false,
+  "showHardLineBreaks": true,
+  "showUnicodeWhitespace": true,
+  "outlineListMarkers": false,
+  "showAllCodeblockWhitespace": true,
+  "showAllWhitespace": false,
+  "showCodeblockWhitespace": true,
+  "showFrontmatterWhitespace": true,
+  "showTableWhitespace": true,
+  "showSourceOnlyWhitespace": false
+}
