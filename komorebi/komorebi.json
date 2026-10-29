@@ -16,13 +16,15 @@
   "default_container_padding": 6,
   "border": true,
   "border_width": 3,
-  "border_offset": -1,
+  "border_offset": 0,
   "border_style": "System",
   "border_colours": {
     "single": "#C4FFB0",
-    "stack": "#FFFFFF",
-    "monocle": "#FFFFFF",
-    "unfocused": "#11111B"
+    "stack": "#E0CCFF",
+    "monocle": "#E0CCFF",
+    "floating": "#E6F2DE",
+    "unfocused": "#2A3326",
+    "unfocused_non_floating": "#2A3326"
   },
   "mouse_follows_focus": false,
   "transparency": true,
@@ -33,16 +35,11 @@
       "movement": 300,
       "transparency": 300
     },
-    "fps": 60,
+    "fps": 144,
     "style": {
       "movement": "EaseInOutCubic",
       "transparency": "Linear"
     }
-  },
-  "theme": {
-    "palette": "Catppuccin",
-    "name": "Mocha",
-    "accent": "Mocha"
   },
   "stackbar": {
     "height": 24,
